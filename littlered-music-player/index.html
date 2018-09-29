@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LittleRed Player</title>
+    <link href="littlered.css" rel="stylesheet">
+  </head>
+  <body onclick="changecolor()" onmousemove="changecolor()">
+    <noscript><div style="position:fixed; width:100%; top:0px; left:0px; padding:5px 0px; background:#000; color:#fff; text-align:center;">Oh no... Please visit this page from a device with javascript enabled : )</div></noscript>
+
+    <div id="main">
+      <div id="playercage">
+        <script src="https://niconicosette.github.io/re/littlered-music-player/littleredplayer.js"></script><div id="xlittleplayer"><span id="xlittleplayerinfo" style="display:none;">#7962F5 off https://niconicosette.github.io/re/littlered-music-player/oak.mp3</span><span id="xlittleplayernames" style="display:none;">0,0,Oak's Theme</span></div>
+      </div>
+
+      <div id="infobox">
+        LittleRed Player is a simple, colour-customisable music player you can add to your blog or website. To create your custom player, select your colour and autoplay settings below. Then follow the instructions to add tracks to your playlist.
+      </div>
+
+      <div id="cinterface">
+        <div id="colorcage">
+          <input type="text" class="jscolor" id="playercolor" value="#7962F5">
+        </div>
+
+        <div id="autoplaycage">
+          <input type="submit" value="autoplay is off" id="abutton" onclick="auto()">
+        </div>
+        <div class="kr"></div>
+
+        <div id="trackcage">
+          <div id="trackguide">
+            Upload your mp3 tracks to a host (like <a href="https://kiwi6.com/" target="_blank">kiwi6</a>) and copy & paste the direct urls here. Make sure to add song titles too!
+          </div>
+          <input id="trackurl1" type="text" value="https://niconicosette.github.io/re/littlered-music-player/oak.mp3" placeholder="http://">
+          <input id="trackname1" type="text" value="Oak's Theme" placeholder="Title">
+          <input id="trackurl2" type="text" placeholder="http://">
+          <input id="trackname2" type="text" placeholder="Title">
+          <input id="trackurl3" type="text" placeholder="http://">
+          <input id="trackname3" type="text" placeholder="Title">
+          <input id="trackurl4" type="text" placeholder="http://">
+          <input id="trackname4" type="text" placeholder="Title">
+          <input id="trackurl5" type="text" placeholder="http://">
+          <input id="trackname5" type="text" placeholder="Title">
+          <input id="trackurl6" type="text" placeholder="http://">
+          <input id="trackname6" type="text" placeholder="Title">
+          <input id="trackurl7" type="text" placeholder="http://">
+          <input id="trackname7" type="text" placeholder="Title">
+          <input id="trackurl8" type="text" placeholder="http://">
+          <input id="trackname8" type="text" placeholder="Title">
+          <input id="trackurl9" type="text" placeholder="http://">
+          <input id="trackname9" type="text" placeholder="Title">
+          <div class="kr"></div>
+        </div>
+
+        <input id="generate" type="submit" value="Get your code!" onclick="generate()">
+      </div>
+      <textarea id="codebox" spellcheck="false"></textarea>
+    </div>
+  </body>
+  <script src="littlered.js"></script>
+  <script src="jscolor.js"></script>
+</html>

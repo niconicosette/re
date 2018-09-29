@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>niconicosette</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Front-End Developer and UI Designer"/>
+    <meta http-equiv="content-script-type" content="text/javascript" />
+    <meta http-equiv="content-style-type" content="text/css" />
+    <meta http-equiv="content-language" content="en" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="img/ob.png" />
+    <link rel="stylesheet" href="style.css" />
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<script>
+$('html').hide();
+$(document).ready(function(){
+$('#cover').css('display', 'block');
+$('html').show();
+$('#cover').delay(300).fadeOut(700);
+});
+</script>
+
+</head>
+
+<body>
+    <div id="cover"></div>
+    <div id="content">
+
+        <div id="top">
+            <div id="ship"></div>
+            <img id="backupbg" src="img/bg.png" />
+        </div>
+
+        <div id="words">
+        <div id="wordscontent">
+            <div id="intro">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+          
+            </div>
+
+        </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>tutorial: deploying a discord bot to heroku</title>
+		<meta charset="UTF-8" />
+		<meta name="description" content="how to deploy a simple node.js discord bot to a heroku server"/>
+	    <meta name="viewport" content="width=device-width, initial-scale=1" />
+		<style>
+			body { margin:0px; padding:0px; font-family:arial; font-size:14px; letter-spacing:0.8px; line-height:24px; color:#444; }
+			ul { list-style:none; padding:0px; margin:5px 0px; }
+			h1 { font-size:18px; font-weight:normal; border-bottom:1px solid #ddd; padding-bottom:5px; padding-top:10px; }
+			p { margin:0; padding:0px 0px 15px 0px; }
+			a { color:#E36484; text-decoration:none; }
+			a:hover { text-decoration:underline; }
+			strong { font-style:oblique; color:#657CC9; }
+			.code { display:block; font-family:courier; background:#F2F2F2; padding:7px; font-size:13px; line-height:13px; margin:4px 0px; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; }
+			#main { width:650px; position:relative; margin:auto; }
+			@media only screen and (max-width: 700px) {
+				#main { width:auto; padding:0px 30px; }
+			}
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<h1>
+				deploying a simple node.js discord bot to heroku
+			</h1>
+			<p>
+				this tutorial will show you how to set up and deploy your own discord bot to heroku. it will require use of the command line. if you've never used the command line before, don't worry - all the commands you'll need to enter are written out for you in the tutorial. on windows, you can find the command line under the program name <strong>cmd.exe</strong>, and on mac and linux you'll find it under the application name <strong>terminal.app</strong>. if you come across any issues with this tutorial, feel free to open an issue or contact me directly &rarr; <a href="https://github.com/niconicosette">@niconicosette</a>
+			</p>
+			<h1>
+				before you start
+			</h1>
+			<p>
+				if you haven't already, you'll need to download and install:
+				<ul>
+					<li>git &rarr; <a href="https://git-scm.com/downloads" target="_blank">https://git-scm.com/downloads</a></li>
+					<li>node.js &rarr; <a href="https://nodejs.org/en/download" target="_blank">https://nodejs.org/en/download</a></li>
+					<li>heroku cli &rarr; <a href="https://nodejs.org/en/download" target="_blank">https://devcenter.heroku.com/articles/heroku-cli</a></li>
+				</ul>
+			</p>
+			<p>
+				then, if you haven't already, open the command line and configure your git email address:
+				<span class="code">git config --global user.email "youremail@anything.com"</span>
+			</p>
+			<h1>
+				ready to start
+			</h1>
+			<p>
+				<strike>start by cloning this repo in the command line:</strike> this step is outdated, skip it
+				<span class="code"><strike>git clone https://github.com/niconicosette/dcbot.git</strike></span>
+			</p>
+			<p>
+				start by <a href="https://github.com/niconicosette/re/raw/gh-pages/herokubot/dcbot.zip">downloading the dcbot</a> zip file. drag the file into your home directory and unzip it, then navigate to the dcbot directory in the command line:
+				<span class="code">cd dcbot</span>
+			</p>
+			<p>
+				create a new git repository in the directory:
+				<span class="code">git init</span>
+			</p>
+				in your browser, go to <a href="https://discordapp.com/developers/applications/" target="_blank">https://discordapp.com/developers/applications</a> and choose <strong>create an application</strong>. choose an app name, a description, and a picture.
+			</p>
+			<p>
+				in the sidebar, select the <strong>bot</strong> tab and choose <strong>add bot</strong>
+			</p>
+			<p>
+				click on the <strong>click to reveal token</strong> link, then copy and paste this token somewhere, like a plain text document.
+			</p>
+			<p>
+				in the repo, open the <strong>index.js</strong> file and in the line
+				<span class="code">client.login('*************************');</span>
+				replace the stars with the token you copied
+			</p>
+			<h1>
+				set up a heroku server
+			</h1>
+			<p>
+				sign up for heroku account &rarr; <a href="https://signup.heroku.com" target="_blank">https://signup.heroku.com</a>
+			</p>
+			<p>
+				return to the command line and enter:
+				<span class="code">heroku login</span>
+				then enter your heroku login credentials when prompted
+			</p>
+			<p>
+				create the heroku app and replace yourappnamehere with something cute:
+				<span class="code">heroku create yourappnamehere</span>
+			</p>
+			<p>
+				add the bot files to staging:
+				<span class="code">git add *</span>
+			</p>
+			<p>
+				commit the files:
+				<span class="code">git commit -m "uploading dcbot files"</span>
+			</p>
+			<p>
+				push the files to heroku:
+				<span class="code">git push heroku master</span>
+				it may take some time for heroku to build the app
+			</p>
+			<p>
+				get the app running:
+				<span class="code">heroku ps:scale web=1</span>
+			</p>
+			<p>
+				and take a peek at the logs:
+				<span class="code">heroku logs --tail</span>
+				if alls well, you should see a line in there that reads <strong>state changed from starting to up</strong>
+			</p>
+			<p>
+				in your browser, go to <a href="https://discordapp.com/developers/applications/" target="_blank">https://discordapp.com/developers/applications/</a> and select your app. under the <strong>name</strong> field you'll see a <strong>client id</strong> field. use that number to replace the 00000000 in the URL below with your bot's client ID.
+				<span class="code">https://discordapp.com/oauth2/authorize?client_id=00000000&scope=bot</span>
+			</p>
+			<p>
+				copy and paste the new URL into your browser to invite your bot to your server
+			</p>
+			<p>
+				send a message on your server that says <strong>sigh</strong> or <strong>ramen</strong> and your bot should reply
+			</p>
+			<h1>
+				keeping your bot awake
+			</h1>
+			<p>
+				the limitations placed on a free heroku account will cause your bot to fall asleep if no one interacts with it for 30 minutes. you can keep your bot alive 24/7 by removing the <strong>/*</strong> and <strong>*/</strong> from around this code block in <strong>index.js</strong> and replacing <strong>nameofyourherokuapp</strong> with the name you specified earlier when you created your heroku app
+				<span class="code">
+					/*<br>
+var http = require("http");<br>
+setInterval(function() {<br>
+    http.get("http://nameofyourherokuapp.herokuapp.com");<br>
+					}, 100000);</br>
+					*/</span>
+				a free heroku account is given 550 hours of total wake time per month, but 24 hours x 31 days = 744 hours. to get around this, you can verify your heroku account with a credit card for no charge, and get 450 extra hours every month, bringing your total up to 1000 free hours. yay! now your bot can be perpetually awake!
+			</p>
+			<h1>
+				where to go from here
+			</h1>
+			<p>
+				you can edit the <strong>package.json</strong> to fill in your name, your bot's name, version number, URL, and so on. then you can check out the discord.js library and start writing some fun code &rarr; <a href="https://discord.js.org/#/docs/main/stable/general/welcome" target="_blank">https://discord.js.org/#/docs/main/stable/general/welcome</a>
+			</p>
+		</main>
+	</body>
+</html>

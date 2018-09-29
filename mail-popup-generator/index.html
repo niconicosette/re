@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mail Popup Generator</title>
+    <link href="mg.css" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=0.8" name="viewport">
+</head>
+<body onclick="test(); cod()" onkeypress="test(); cod()" onkeyup="test(); cod()" onmousemove=
+"test(); cod()">
+    <div id="sect3">
+        <div id="mailboxcage">
+            <div id="mailbox">
+                <div id="whitecover"></div>
+                <div id="envelope">
+                    <div id="middleline"></div>
+                    <div id="intriangle"></div>
+                    <div id="intriangle2"></div>
+                </div>
+                <div id="outtriangle"></div>
+                <div id="paper">
+                    <div class="paperline"></div>
+                    <div class="paperline"></div>
+                    <div class="paperline"></div>
+                </div>
+                <div id="bigpapercontainer">
+                    <div id="bigpaper">
+                        <div id="bigpapertext">
+                            Type your letter text here. Note: If your message
+                            is too long, it will be clipped.
+                        </div>
+                        <div class="bigpaperline"></div>
+                        <div class="bigpaperline"></div>
+                        <div class="bigpaperline"></div>
+                        <div class="bigpaperline"></div>
+                        <div class="bigpaperline"></div>
+                        <div class="bigpaperline"></div>
+                        <div class="bigpaperline"></div>
+                        <div class="bigpaperline"></div>
+                        <div class="bigpaperline"></div>
+                        <div class="bigpaperline"></div>
+                        <div class="bigpaperline"></div>
+                        <div class="bigpaperline"></div>
+                        <div class="bigpaperline"></div>
+                        <div class="bigpaperline"></div>
+                        <div class="bigpaperline"></div>
+                        <div class="bigpaperline"></div>
+                        <div class="bigpaperline"></div>
+                        <div class="bigpaperline"></div>
+                        <div class="bigpaperline"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="coverletter"></div>
+        </div>
+        <div id="sect4">
+            <div id="controls">
+                <form>
+                    <div class="buttbox">
+                        <div class="buttontitle">
+                            Font
+                        </div><input class="jscolor" id="fontf" name="fontf"
+                        type="text" value="#000000">
+                    </div>
+                    <div class="buttbox">
+                        <div class="buttontitle">
+                            Borders
+                        </div><input class="jscolor" id="bordersf" name=
+                        "bordersf" type="text" value="#000000">
+                    </div>
+                    <div class="buttbox">
+                        <div class="buttontitle">
+                            Envelope
+                        </div><input class="jscolor" id="envelopef" name=
+                        "envelopef" type="text" value="#F1F1F1">
+                    </div>
+                    <div class="buttbox">
+                        <div class="buttontitle">
+                            Paper
+                        </div><input class="jscolor" id="paperf" name="paperf"
+                        type="text" value="#FFFFFF">
+                    </div>
+                    <div class="buttbox">
+                        <div class="buttontitle">
+                            Paper Line
+                        </div><input class="jscolor" id="paperlinesf" name=
+                        "paperlinesf" type="text" value="#F1F1F1">
+                    </div>
+                    <div class="buttbox">
+                        <div class="buttontitle">
+                            Shadow
+                        </div><input class="jscolor" id="shadowf" name=
+                        "shadowf" type="text" value="#F1F1F1">
+                    </div>
+                    <textarea id=
+                    "textf">Type your letter text here. Note: If your message is too long, it will be clipped.</textarea>
+                </form>
+            </div>
+        </div>
+        <div id="sect1">
+            <div class="copydis">
+                Click once in the grey box to select the code, then copy &
+                paste it above the <strong>&lt;/style&gt;</strong> tag in your
+                own code.
+            </div>
+            <div id="stylecode">
+                #mailboxcage &lcub; position:fixed; bottom:22px; left:32px;
+                z-index:9999999; height:82px; width:62px; display:block;
+                &rcub;<br>
+                <br>
+                #mailbox &lcub; cursor:pointer; &rcub;<br>
+                <br>
+                #envelope &lcub; position:absolute; width:60px; height:80px;
+                background:#F1F1F1; border-left:1px solid #000000;
+                border-right:1px solid #000000; border-bottom:1px solid
+                #000000; border-top:1px solid #000000;
+                -webkit-border-radius:4px; -moz-border-radius:4px;
+                border-radius:4px; overflow:hidden; box-shadow:4px 4px 1px
+                #F1F1F1; z-index:10; &rcub;<br>
+                <br>
+                #middleline &lcub; height:80px; width:1px; background:#000000;
+                position:absolute; margin:0px 0px 0px 29px; opacity:0.5;
+                &rcub;<br>
+                <br>
+                #intriangle &lcub; position:absolute; width:60px; height:60px;
+                border:1px solid #000000; -webkit-border-radius:15px;
+                -moz-border-radius:15px; border-radius:15px;
+                background:#F1F1F1; margin:-39px 0px 0px -1px;
+                -ms-transform:rotate(45deg); -webkit-transform:rotate(45deg);
+                transform:rotate(45deg); &rcub;<br>
+                <br>
+                #outtriangle &lcub; position:absolute; margin:-20px 0px 0px
+                5px; width:50px; height:50px; border:1px solid #000000;
+                -webkit-border-radius:15px; -moz-border-radius:15px;
+                border-radius:15px; background:#F1F1F1;
+                -ms-transform:rotate(45deg); -webkit-transform:rotate(45deg);
+                transform:rotate(45deg); z-index:8; opacity:0; &rcub;<br>
+                <br>
+                #paper &lcub; position:absolute; z-index:9; margin:-15px 0px
+                0px 0px; width:60px; height:40px; border:1px solid #000000;
+                background:#FFFFFF; -webkit-border-radius:3px;
+                -moz-border-radius:3px; border-radius:3px; opacity:0;
+                overflow:hidden; &rcub;<br>
+                <br>
+                .paperline &lcub; width:40px; height:1px; background:#F1F1F1;
+                margin:4px 0px -2px 10px; &rcub;<br>
+                <br>
+                #bigpapercontainer &lcub; position:absolute; margin:-125px 0px
+                0px 100px; opacity:0; transition:all 0.5s ease-in-out;
+                &rcub;<br>
+                <br>
+                #bigpaper &lcub; border:1px solid #000000; background:#FFFFFF;
+                -webkit-border-radius:4px; -moz-border-radius:4px;
+                border-radius:4px; box-shadow:4px 4px 1px #F1F1F1;
+                overflow:hidden; width:120px; height:160px; &rcub;<br>
+                <br>
+                #bigpapertext &lcub; position:absolute; z-index:11; margin:5px
+                0px 0px 10px; font-family:arial; font-size:10px;
+                line-height:13px; overflow:hidden; color:#000000; width:100px;
+                height:140px; &rcub;<br>
+                <br>
+                .bigpaperline &lcub; width:120px; height:1px;
+                background:#F1F1F1; margin-top:7px; &rcub;<br>
+                <br>
+                #coverletter &lcub; position:absolute; width:130px;
+                height:170px; margin:-125px 0px 0px 100px; opacity:0;
+                &rcub;<br>
+                <br>
+                #mailbox:hover #outtriangle &lcub; opacity:1; &rcub;<br>
+                <br>
+                #mailbox:hover #intriangle &lcub; background:#FFFFFF;
+                margin:-43px 0px 0px -1px; border-radius:20px; &rcub;<br>
+                <br>
+                #mailbox:hover #envelope &lcub; border-top:1px solid #FFFFFF;
+                &rcub;<br>
+                <br>
+                #mailbox:hover #paper &lcub; opacity:1; &rcub;<br>
+                <br>
+                #mailbox:hover #bigpapercontainer &lcub; opacity:1;
+                margin:-130px 0px 0px 100px; &rcub;
+            </div>
+        </div>
+        <div id="sect2">
+            <div class="copydis2">
+                Then copy & paste this above the <strong>&lt;/body&gt;</strong>
+                tag. All done!
+            </div>
+            <div id="bodycode">
+                &lt;div id&equals;"mailboxcage"&gt;<br>
+                &lt;div id&equals;"mailbox"&gt;<br>
+                &lt;div id&equals;"envelope"&gt;<br>
+                &lt;div id&equals;"middleline"&gt;&lt;/div&gt;<br>
+                &lt;div id&equals;"intriangle"&gt;&lt;/div&gt;<br>
+                &lt;/div&gt;<br>
+                &lt;div id&equals;"outtriangle"&gt;&lt;/div&gt;<br>
+                &lt;div id&equals;"paper"&gt;<br>
+                &lt;div class&equals;"paperline"&gt;&lt;/div&gt;<br>
+                &lt;div class&equals;"paperline"&gt;&lt;/div&gt;<br>
+                &lt;div class&equals;"paperline"&gt;&lt;/div&gt;<br>
+                &lt;/div&gt;<br>
+                &lt;div id&equals;"bigpapercontainer"&gt;<br>
+                &lt;div id&equals;"bigpaper"&gt;<br>
+                &lt;div id&equals;"bigpapertext"&gt;Type your letter text here.
+                Note: If your message is too long, it will be
+                clipped.&lt;/div&gt;<br>
+                &lt;div class&equals;"bigpaperline"&gt;&lt;/div&gt;<br>
+                &lt;div class&equals;"bigpaperline"&gt;&lt;/div&gt;<br>
+                &lt;div class&equals;"bigpaperline"&gt;&lt;/div&gt;<br>
+                &lt;div class&equals;"bigpaperline"&gt;&lt;/div&gt;<br>
+                &lt;div class&equals;"bigpaperline"&gt;&lt;/div&gt;<br>
+                &lt;div class&equals;"bigpaperline"&gt;&lt;/div&gt;<br>
+                &lt;div class&equals;"bigpaperline"&gt;&lt;/div&gt;<br>
+                &lt;div class&equals;"bigpaperline"&gt;&lt;/div&gt;<br>
+                &lt;div class&equals;"bigpaperline"&gt;&lt;/div&gt;<br>
+                &lt;div class&equals;"bigpaperline"&gt;&lt;/div&gt;<br>
+                &lt;div class&equals;"bigpaperline"&gt;&lt;/div&gt;<br>
+                &lt;div class&equals;"bigpaperline"&gt;&lt;/div&gt;<br>
+                &lt;div class&equals;"bigpaperline"&gt;&lt;/div&gt;<br>
+                &lt;div class&equals;"bigpaperline"&gt;&lt;/div&gt;<br>
+                &lt;div class&equals;"bigpaperline"&gt;&lt;/div&gt;<br>
+                &lt;div class&equals;"bigpaperline"&gt;&lt;/div&gt;<br>
+                &lt;div class&equals;"bigpaperline"&gt;&lt;/div&gt;<br>
+                &lt;div class&equals;"bigpaperline"&gt;&lt;/div&gt;<br>
+                &lt;div class&equals;"bigpaperline"&gt;&lt;/div&gt;<br>
+                &lt;/div&gt;<br>
+                &lt;/div&gt;<br>
+                &lt;/div&gt;<br>
+                &lt;div id&equals;"coverletter"&gt;&lt;/div&gt;<br>
+                &lt;/div&gt;
+            </div>
+        </div>
+        <div id="dummy"></div>
+    </div>
+    <div id="tit">
+        Mail Pop-Up Generator
+    </div>
+    <div id="ftt">
+        
+    </div>
+    <script src="mg.js">
+    </script> 
+    <script src="jscolor.js">
+    </script>
+</body>
+</html>

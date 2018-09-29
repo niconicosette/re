@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Hiragana Match</title>
+	<meta charset="UTF-8" />
+	<meta name="description" content="Hiragana matching game for Japanese learners."/>
+	<meta http-equiv="content-script-type" content="text/javascript" />
+	<meta http-equiv="content-style-type" content="text/css" />
+	<meta http-equiv="content-language" content="en" />
+
+    <link href='https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise' rel='stylesheet' type='text/css'>
+
+<style>
+
+body { margin:0; font-family:arial, sans-serif; font-size:13px; line-height:13px; letter-spacing:1px; color:#363636; }
+
+a { text-decoration:none; color:#6ACCAA; }
+
+#main { width:540px; height:340px; position:fixed; left:calc(50% - 270px); top:calc(50% - 120px); }
+
+#title { position:absolute; width:540px; text-align:center; margin-top:-100px; font-size:45px; letter-spacing:2px; font-family:'Waiting for the Sunrise', sans-serif; cursor:default; }
+
+#desc { position:absolute; width:540px; text-align:center; letter-spacing:1px; margin-top:-45px; }
+
+#footer { position:fixed; width:100%; text-align:center; letter-spacing:1px; font-size:11px; line-height:11px; left:0px; bottom:12px; }
+
+.clear { clear:both; }
+
+#hira { float:left; width:260px; height:340px; }
+
+#latin { float:right; width:260px; height:340px; }
+
+.box1, .box2, .box3 { width:35px; height:35px; border:1px solid #363636; margin:0px 5px 5px 0px; float:left; }
+
+.c1box { position:absolute; z-index:1; opacity:0; }
+
+.c2box { position:absolute; z-index:2; width:35px; height:25px; padding-top:10px; text-align:center; cursor:pointer; }
+
+.c3box { z-index:3; position:absolute; width:35px; height:25px; padding-top:10px; text-align:center; background:#F0FFF5; opacity:0; cursor:default; }
+
+.wrong { z-index:4; width:35px; height:35px; position:absolute; background:#F07A96; opacity:0; cursor:pointer; }
+
+.seeme { opacity:1 !important; }
+
+.blue { background:#EDF6FF !important; }
+
+.red { background:#f1f1f1 !important; }
+
+#counter { position:fixed; top:5px; left:5px; display:none; }
+#x { position:fixed; top:25px; left:5px; display:none; }
+
+</style>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<script>
+
+window.onload = function() {
+    var x;
+    var count = 0;
+    $(".box1").click(function(){
+        $(this).addClass("blue");
+        $(this).siblings().removeClass("blue");
+        x = $(this).children(":first").html();
+        $("#x").html(x);
+    });
+
+    $(".box2").click(function(){
+        if ( $(this).children(":first").html() == x ) {
+            $(this).addClass("red");
+            count += 1;
+            x = 0;
+            $("#x").html(x);
+            $("#counter").html(count);
+            $(".blue").hide();
+            $(this).children(":nth-child(3)").addClass("seeme");
+            $(this).children(":nth-child(4)").hide();
+        }
+        
+        else {
+            $(this).children(":nth-child(4)").animate({ opacity: '0.3' }, 200);
+            $(this).children(":nth-child(4)").animate({ opacity: '0' }, 200);
+        }
+    });
+
+    $(".wrong").click(function(){
+        if ( count == 45 ) { 
+            $("#hira").hide(); 
+            $("#latin").animate({ marginRight : '130px' }, 1000); 
+            $("#desc").html('Awesome! You did it! <a href="http://niconicosette.github.io/re/hiragana-match-game">Play again?</a>');
+        }
+    });
+
+};
+
+</script>
+
+</head>
+
+<body>
+
+<div id="main">
+
+    <div id="title">Hiragana Match</div>
+    <div id="desc">Click a character, then click on the corresponding pronounciation.</div>
+
+    <div id="hira">
+    <div class="box1">
+        <div class="c1box">19</div>
+        <div class="c2box">て</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">38</div>
+        <div class="c2box">る</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">22</div>
+        <div class="c2box">に</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">12</div>
+        <div class="c2box">し</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">29</div>
+        <div class="c2box">へ</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">31</div>
+        <div class="c2box">ま</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">46</div>
+        <div class="c2box">ん</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">1</div>
+        <div class="c2box">あ</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">18</div>
+        <div class="c2box">つ</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">6</div>
+        <div class="c2box">か</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">42</div>
+        <div class="c2box">ゆ</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">17</div>
+        <div class="c2box">ち</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">5</div>
+        <div class="c2box">お</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">14</div>
+        <div class="c2box">せ</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">10</div>
+        <div class="c2box">こ</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">11</div>
+        <div class="c2box">さ</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">44</div>
+        <div class="c2box">わ</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">7</div>
+        <div class="c2box">き</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">13</div>
+        <div class="c2box">す</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">40</div>
+        <div class="c2box">ろ</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">2</div>
+        <div class="c2box">い</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">16</div>
+        <div class="c2box">た</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">8</div>
+        <div class="c2box">く</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">27</div>
+        <div class="c2box">ひ</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">24</div>
+        <div class="c2box">ね</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">15</div>
+        <div class="c2box">そ</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">21</div>
+        <div class="c2box">な</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">4</div>
+        <div class="c2box">え</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">23</div>
+        <div class="c2box">ぬ</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">26</div>
+        <div class="c2box">は</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">3</div>
+        <div class="c2box">う</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">25</div>
+        <div class="c2box">の</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">43</div>
+        <div class="c2box">よ</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">30</div>
+        <div class="c2box">ほ</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">20</div>
+        <div class="c2box">と</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">45</div>
+        <div class="c2box">を</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">32</div>
+        <div class="c2box">み</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">36</div>
+        <div class="c2box">ら</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">9</div>
+        <div class="c2box">け</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">28</div>
+        <div class="c2box">ふ</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">34</div>
+        <div class="c2box">め</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">37</div>
+        <div class="c2box">り</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">35</div>
+        <div class="c2box">も</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">39</div>
+        <div class="c2box">れ</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">33</div>
+        <div class="c2box">む</div>
+    </div>
+    <div class="box1">
+        <div class="c1box">41</div>
+        <div class="c2box">や</div>
+    </div>
+        <div class="clear"></div>
+    </div>
+
+<div id="latin">
+    <div class="box2">
+        <div class="c1box">1</div>
+        <div class="c2box">a</div>
+        <div class="c3box">あ</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">2</div>
+        <div class="c2box">i</div>
+        <div class="c3box">い</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">3</div>
+        <div class="c2box">u</div>
+        <div class="c3box">う</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">4</div>
+        <div class="c2box">e</div>
+        <div class="c3box">え</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">5</div>
+        <div class="c2box">o</div>
+        <div class="c3box">お</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">6</div>
+        <div class="c2box">ka</div>
+        <div class="c3box">か</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">7</div>
+        <div class="c2box">ki</div>
+        <div class="c3box">き</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">8</div>
+        <div class="c2box">ku</div>
+        <div class="c3box">く</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">9</div>
+        <div class="c2box">ke</div>
+        <div class="c3box">け</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">10</div>
+        <div class="c2box">ko</div>
+        <div class="c3box">こ</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">11</div>
+        <div class="c2box">sa</div>
+        <div class="c3box">さ</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">12</div>
+        <div class="c2box">shi</div>
+        <div class="c3box">し</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">13</div>
+        <div class="c2box">su</div>
+        <div class="c3box">す</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">14</div>
+        <div class="c2box">se</div>
+        <div class="c3box">せ</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">15</div>
+        <div class="c2box">so</div>
+        <div class="c3box">そ</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">16</div>
+        <div class="c2box">ta</div>
+        <div class="c3box">た</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">17</div>
+        <div class="c2box">chi</div>
+        <div class="c3box">ち</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">18</div>
+        <div class="c2box">tsu</div>
+        <div class="c3box">つ</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">19</div>
+        <div class="c2box">te</div>
+        <div class="c3box">て</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">20</div>
+        <div class="c2box">to</div>
+        <div class="c3box">と</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">21</div>
+        <div class="c2box">na</div>
+        <div class="c3box">な</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">22</div>
+        <div class="c2box">ni</div>
+        <div class="c3box">に</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">23</div>
+        <div class="c2box">nu</div>
+        <div class="c3box">ぬ</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">24</div>
+        <div class="c2box">ne</div>
+        <div class="c3box">ね</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">25</div>
+        <div class="c2box">no</div>
+        <div class="c3box">の</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">26</div>
+        <div class="c2box">ha</div>
+        <div class="c3box">は</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">27</div>
+        <div class="c2box">hi</div>
+        <div class="c3box">ひ</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">28</div>
+        <div class="c2box">fu</div>
+        <div class="c3box">ふ</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">29</div>
+        <div class="c2box">he</div>
+        <div class="c3box">へ</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">30</div>
+        <div class="c2box">ho</div>
+        <div class="c3box">ほ</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">31</div>
+        <div class="c2box">ma</div>
+        <div class="c3box">ま</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">32</div>
+        <div class="c2box">mi</div>
+        <div class="c3box">み</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">33</div>
+        <div class="c2box">mu</div>
+        <div class="c3box">む</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">34</div>
+        <div class="c2box">me</div>
+        <div class="c3box">め</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">35</div>
+        <div class="c2box">mo</div>
+        <div class="c3box">も</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">36</div>
+        <div class="c2box">ra</div>
+        <div class="c3box">ら</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">37</div>
+        <div class="c2box">ri</div>
+        <div class="c3box">り</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">38</div>
+        <div class="c2box">ru</div>
+        <div class="c3box">る</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">39</div>
+        <div class="c2box">re</div>
+        <div class="c3box">れ</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">40</div>
+        <div class="c2box">ro</div>
+        <div class="c3box">ろ</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">41</div>
+        <div class="c2box">ya</div>
+        <div class="c3box">や</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">42</div>
+        <div class="c2box">yu</div>
+        <div class="c3box">ゆ</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">43</div>
+        <div class="c2box">yo</div>
+        <div class="c3box">よ</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">44</div>
+        <div class="c2box">wa</div>
+        <div class="c3box">わ</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">45</div>
+        <div class="c2box">wo</div>
+        <div class="c3box">を</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box2">
+        <div class="c1box">46</div>
+        <div class="c2box">n</div>
+        <div class="c3box">ん</div>
+        <div class="wrong"></div>
+    </div>
+    <div class="box3"></div>
+    <div class="box3"></div>
+    <div class="clear"></div>
+</div>
+
+<div class="clear"></div>
+
+</div>
+
+<div id="counter">counter</div>
+
+<div id="x">x</div>
+
+</body>
+</html>

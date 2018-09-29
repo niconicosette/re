@@ -1,0 +1,34 @@
+html, body {margin:0; padding:0; -webkit-touch-callout:none;  -webkit-user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none; font-family:Helvetica, Arial, sans-serif; font-size:1.15em; letter-spacing:0.16em; line-height:1.8em; color:#999; font-weight:100;}
+
+.cr {clear:both;}
+
+#pcontainer {width:630px; margin:auto; padding-top:100px;}
+
+#hd {display:block; width:100%; border-top:1px solid #ccc; margin-bottom:80px;}
+
+#logo {width:100px; height:37px; margin-top:-17px; margin-left:250px; display:block; background-image:url('img/pallet.png'); background-size:100px 37px; background-image:linear-gradient(transparent, transparent), url(img/pallet.svg); border-right:6px solid #fff; border-left:6px solid #fff; margin-left:calc(50% - 50px);}
+
+#en {float:left; width:270px; height:384px; display:block; background-image:url('img/pen.png'); background-size:270px 384px; background-image:linear-gradient(transparent, transparent), url(img/pen.svg);}
+
+#jp {float:right; width:270px; height:384px; display:block; background-image:url('img/pjp.png'); background-size:270px 384px; background-image:linear-gradient(transparent, transparent), url(img/pjp.svg);}
+
+#desc {width:100%; display:block; margin-top:90px; text-align:center; font-style:oblique; line-height:1.4em;}
+
+#desc img {width:15px; position:absolute; margin-top:1px; margin-left:-24px;}
+
+#get {border:1px dashed #ddd; padding:15px 20px; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; background:#f9f9f9; -webkit-transition:all 0.3s ease-in-out;-moz-transition:all 0.3s ease-in-out;-o-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out; color:#888; text-decoration:none; font-style:normal; font-size:0.9em; line-height:0.9em;}
+
+#get:hover {border:1px dashed #29d6b4; color:#29d6b4;}
+
+#foot {margin:80px 0px 40px 0px; border-top:1px solid #ccc; padding:7px; font-size:0.6em; letter-spacing:0.1em; line-height:1.4em; text-align:center;}
+
+#foot a {color:#1fbfa0; text-decoration:none;}
+#foot a:hover { text-decoration:underline;}
+
+#cover { z-index:100; position:fixed; display:none; width:100%; height:100%; top:0px; left:0px; background:#ffffff; }
+
+@media only screen and (max-width: 640px) {
+#pcontainer {width:100%;}
+#jp {display:none;}
+#en { float:none; margin:auto; }
+}

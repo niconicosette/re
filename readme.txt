@@ -1,1 +1,1 @@
-the projects in this repository are no longer being updated or maintained, but still live and mostly working
+the projects in this repository are no longer being updated or maintained, but are still live and mostly working

@@ -7,7 +7,13 @@
 <style>
 body { background-color:#000; color:#f1f1f1; margin:20px; font-family:verdana; font-size:16px; letter-spacing:1px; }
 #main { width:calc(100% - 20px); background-color:#000; padding:10px; margin:0; }
-.category { background:#333; padding:10px; }
+.category { background:#333; padding:13px; letter-spacing:2px; font-size:15px; -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */}
 li { margin:20px 0px; }
 .task {
   -webkit-touch-callout: none; /* iOS Safari */
@@ -18,7 +24,7 @@ li { margin:20px 0px; }
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
-.done { text-decoration: line-through; }
+.done { text-decoration: line-through; color:#555; }
 </style>
 </head>
 <body>

@@ -15,7 +15,7 @@ body { background-color:#000; color:#f1f1f1; margin:20px; font-family:verdana; f
           user-select: none; /* Non-prefixed version, currently
                                 supported by Chrome, Edge, Opera and Firefox */}
 li { margin:20px 0px; }
-.task {
+.task, .taskshift, .taskshiftbig {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
@@ -24,7 +24,9 @@ li { margin:20px 0px; }
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
-.done { text-decoration: line-through; color:#555; }
+.done { text-decoration: line-through; color:#555 !important; }
+.taskshift { color:#8CBFFF; }
+.taskshiftbig { color:#ff6e63; }
 </style>
 </head>
 <body>
@@ -33,61 +35,77 @@ li { margin:20px 0px; }
     <ul>
       <li class="task ">stock fridges</li>
       <li class="task ">stock sleeves, lids, cups, straws, stoppers</li>
-      <li class="task ">tea prep</li>
-      <li class="task ">infusion prep</li>
       <li class="task ">below cabinet prep</li>
-      <li class="task ">make whips/drizzles</li>
+      <li class="task ">make whips</li>
+      <li class="task ">make drizzles</li>
       <li class="task ">inclusion backups</li>
-      <li class="task ">coffee prep</li>
       <li class="task ">make lemonade</li>
-      <li class="task ">make sweet cream</li>
-      <li class="task ">make cold brew</li>
+      <li class="task ">make sweet crm</li>
+      <li class="task ">coffee prep</li>
+      <li class="task ">check coldbrew/keg</li>
+      <li class="task ">check infusions</li>
     </ul>
     <div class="category">GENERAL</div>
     <ul>
       <li class="task ">dishes</li>
-      <li class="task ">pastry count</li>
+      <li class="task ">organise/count pastries</li>
       <li class="task ">pastry pull</li>
-      <li class="task ">gather trash</li>
-      <li class="task ">do trash run</li>
-      <li class="task ">check bathrooms (?)</li>
+      <li class="task ">check bathrooms</li>
+      <li class="taskshift ">empty delivery fridge (?)</li>
+      <li class="task ">gather trash throughout</li>
+      <li class="task ">run trash</li>
+      <li class="taskshift ">par the tills</li>
+      <li class="taskshift ">drop the tills</li>
       <li class="task ">BOH floors</li>
       <li class="task ">BTL floors</li>
-      <li class="task ">8pm dishes/cleanup</li>
-      <li class="task ">pastry case</li>
+      <li class="task ">8pm dishes</li>
+      <li class="task ">8pm cleanup</li>
+      <li class="taskshift ">department count (?)</li>
+      <li class="taskshift ">milk count</li>
+      <li class="taskshift ">fridge temps</li>
+      <li class="taskshiftbig ">fix safe if unbalanced</li>
     </ul>
     <div class="category">PRE-CLOSE</div>
     <ul>
-      <li class="task ">tea trick & sani trick (?)</li>
-      <li class="task ">spray BOH sinks</li>
-      <li class="task ">sweep/mop lobby</li>
-      <li class="task ">wipe tables/chairs (?)</li>
-      <li class="task ">change lobby trash</li>
-      <li class="task ">donate expiring food</li>
       <li class="task ">retire wurtis</li>
+      <li class="task ">pastry case</li>
+      <li class="taskshift ">umbrellas</li>
+      <li class="task ">tea trick & sani</li>
+      <li class="task ">spray clean BOH sinks</li>
+      <li class="task ">retire mop bucket</li>
+      <li class="task ">bag expiring food</li>
+      <li class="taskshift ">order night? count pastries</li>
+      <li class="task ">check BTL stock</li>
       <li class="task ">drop to 1 trash</li>
       <li class="task ">drop to 1 urn</li>
-      <li class="task ">rinse cold bar bins</li>
-      <li class="task ">rinse pastry tub/tongs/box</li>
-      <li class="task ">do the wipe</li>
-      <li class="task ">put out cubes/pills for bars</li>
-      <li class="task ">burn sinks</li>
-      <li class="task ">consolidate tips</li>
-      <li class="task ">check sleeve/lid/cup/fridge stock</li>
+      <li class="task ">wipe food bins</li>
+      <li class="task ">wipe pastry tub</li>
+      <li class="task ">final wipe</li>
+      <li class="task ">unclog coldbar sink</li>
+      <li class="task ">check sleeve/lid/cup stock</li>
       <li class="task ">wipe desk and hobart</li>
+      <li class="taskshiftbig ">double check on computer <b>and</b> in book to make sure all <b>counts</b> are done</li>
     </ul>
     <div class="category">CLOSE</div>
     <ul>
-      <li class="task ">rinse urn</li>
-      <li class="task ">empty trash</li>
-      <li class="task ">toss expiring food</li>
-      <li class="task ">close chill wall</li>
-      <li class="task ">burn ice</li>
+      <li class="task ">lock doors</li>
+      <li class="task ">lock window</li>
       <li class="task ">pill bars</li>
-      <li class="task ">turn off ovens/brew station</li>
+      <li class="task ">toss coffee prep</li>
+      <li class="task ">dump teas</li>
+      <li class="task ">toss leftover pastries</li>
+      <li class="task ">close chill wall</li>
+      <li class="task ">rinse urn</li>
+      <li class="task ">burn ice</li>
+      <li class="task ">turn off ovens</li>
+      <li class="task ">empty trash</li>
       <li class="task ">check wipe</li>
-      <li class="task ">collect sanis</li>
-      <li class="task ">empty mop bucket</li>
+      <li class="task ">toss sani rags</li>
+      <li class="taskshift ">record tip number</li>
+      <li class="taskshift ">record safe numbers</li>
+      <li class="taskshiftbig ">the deposit must be counted twice before submitting. if it doesn't match the system number, do the third recount by hand. still off? that's okay, adjust the number in the the system so it matches the true number IN the bag and ON the bag. must leave a note about this in the book.</li>
+      <li class="taskshift ">leave other key happening notes for anything that did not go as expected (for example: safe errors, stocking problems, anything you were unsure of, anything morning/midday screwed up). communication shows effort and thoughtfulness.</li>
+      <li class="taskshift ">leave a little storewalk note</li>
     </ul>
   </div>
 </body>
@@ -95,6 +113,18 @@ li { margin:20px 0px; }
 <script>
 window.onload = function() {
     $(".task").click(function(){
+      if ($(this).hasClass("done")) {
+        $(this).removeClass("done");
+      }
+      else { $(this).addClass("done"); }
+    });
+    $(".taskshift").click(function(){
+      if ($(this).hasClass("done")) {
+        $(this).removeClass("done");
+      }
+      else { $(this).addClass("done"); }
+    });
+    $(".taskshiftbig").click(function(){
       if ($(this).hasClass("done")) {
         $(this).removeClass("done");
       }

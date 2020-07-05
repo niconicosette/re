@@ -12,7 +12,7 @@ body { background-color:#1d1d26; color:#d7d7e0; margin:20px; font-family:arial; 
 
 .category { background:#2c2c36; padding:16px; letter-spacing:5px; font-size:17px; line-height:17px; border-right:20px solid #4c4c59; color:#9595ab; font-weight:600; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 
-li { margin:20px 0px 20px -12px; list-style:disc; }
+li { margin:20px 0px 20px -12px; }
 
 .task, .taskshift, .taskshiftbig { -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 
@@ -21,6 +21,8 @@ li { margin:20px 0px 20px -12px; list-style:disc; }
 .taskshift { color:#8CBFFF; }
 
 .taskshiftbig { color:#ff6e63; }
+
+.ref {}
 
 </style>
 </head>
@@ -37,39 +39,36 @@ li { margin:20px 0px 20px -12px; list-style:disc; }
       <li class="task ">make lemonade</li>
       <li class="task ">make sweet crm</li>
       <li class="task ">coffee prep</li>
-      <li class="task ">check coldbrew/keg</li>
-      <li class="task ">check infusions</li>
+      <li class="task ">check kegs</li>
+      <li class="task ">check infusion juice dates</li>
     </ul>
     <div class="category"><i class="fas fa-cog"></i> GENERAL</div>
     <ul>
-      <li class="task ">dishes</li>
       <li class="task ">organise/count pastries</li>
       <li class="task ">pastry pull</li>
       <li class="task ">check bathrooms</li>
-      <li class="taskshift ">empty delivery fridge (?)</li>
       <li class="task ">gather trash throughout</li>
       <li class="task ">run trash</li>
-      <li class="taskshift ">par the tills</li>
-      <li class="taskshift ">drop the tills</li>
       <li class="task ">BOH floors</li>
       <li class="task ">BTL floors</li>
       <li class="task ">8pm dishes</li>
       <li class="task ">8pm cleanup</li>
+      <li class="taskshift ">par tills</li>
+      <li class="taskshift ">drop extra tills</li>
       <li class="taskshift ">department count (?)</li>
+      <li class="taskshift ">empty delivery fridge (?)</li>
       <li class="taskshift ">milk count</li>
-      <li class="taskshift ">fridge temps</li>
-      <li class="taskshiftbig ">fix safe if unbalanced</li>
+      <li class="taskshift ">fridge/freezer temps</li>
     </ul>
     <div class="category"><i class="fas fa-moon"></i> PRECLOSE</div>
     <ul>
       <li class="task ">retire wurtis</li>
       <li class="task ">pastry case</li>
-      <li class="taskshift ">umbrellas</li>
       <li class="task ">tea trick & sani</li>
       <li class="task ">spray clean BOH sinks</li>
       <li class="task ">retire mop bucket</li>
-      <li class="task ">bag expiring food</li>
-      <li class="taskshift ">order night? count pastries</li>
+      <li class="task ">bag expiring sandwiches, paninis, fresh food</li>
+      <li class="task ">bag expiring pastries</li>
       <li class="task ">check BTL stock</li>
       <li class="task ">drop to 1 trash</li>
       <li class="task ">drop to 1 urn</li>
@@ -79,7 +78,9 @@ li { margin:20px 0px 20px -12px; list-style:disc; }
       <li class="task ">unclog coldbar sink</li>
       <li class="task ">check sleeve/lid/cup stock</li>
       <li class="task ">wipe desk and hobart</li>
-      <li class="taskshiftbig ">double check on computer <b>and</b> in book to make sure all <b>counts</b> are done</li>
+      <li class="taskshift ">umbrellas</li>
+      <li class="taskshift ">count pastries, sandwiches, fresh food (?)</li>
+      <li class="taskshift ">drop front till</li>
     </ul>
     <div class="category"><i class="fas fa-key"></i> CLOSE</div>
     <ul>
@@ -96,11 +97,37 @@ li { margin:20px 0px 20px -12px; list-style:disc; }
       <li class="task ">empty trash</li>
       <li class="task ">check wipe</li>
       <li class="task ">toss sani rags</li>
+      <li class="taskshiftbig ">double check <b><i>IMS and book</i></b> to make sure all <b><i>counts</i></b> are done. do not rely on other shifts for this information - humans can make errors, and their errors will cost you <i>your</i> job.</li>
+      <li class="taskshift ">drop drive till</li>
+      <li class="taskshiftbig ">count safe and fix if unbalanced</li>
       <li class="taskshift ">record tip number</li>
       <li class="taskshift ">record safe numbers</li>
-      <li class="taskshiftbig ">the deposit must be counted twice before submitting. if it doesn't match the system number, do the third recount by hand. still off? <em><b>adjust the number in the the system</b></em> so it matches the true number <i>in</i> the bag and <i>on</i> the bag. must leave a note about this in the book.</li>
-      <li class="taskshift ">leave other key happening notes for anything that did not go as expected (for ex: stocking problems, anything you were unsure of or had trouble with, anything morning/midday screwed up). communication shows effort and thoughtfulness!</li>
+      <li class="taskshiftbig ">final deposit <b><i>must</i></b> be recounted before submitting. if it doesn't match the system number, do the third recount by hand. still off? <em><b>adjust the number in the the system</b></em> so it matches the true number <i>in</i> the bag and <i>on</i> the bag. it's required to note the adjustment in the book.</li>
+      <li class="taskshift ">leave key happening notes for anything unexpected (ex: stocking, deposit, counts, busy day)</li>
       <li class="taskshift ">leave a little storewalk note</li>
+      <li class="taskshiftbig ">check backdoor, cafe doors, and window are locked</li>
+      <li class="taskshift ">lights and alarm</li>
+    </ul>
+    <div class="category"><i class="fas fa-question-circle"></i> REFERENCE</div>
+    <ul>
+      <li class="ref ">any item with (?) next to it is conditional and must be checked in the system or the book</li>
+      <li class="ref ">blue and red items are SSV tasks</li>
+      <li class="ref ">sweet cream = 1L heavy cream, 600 ML 2% milk, 350 ML vanilla syrup (date for 48h)</li>
+      <li class="ref ">whipped cream = 8 pumps of vanilla + heavy whipping cream to max line in milk steaming pitcher (date for 24h)</li>
+      <li class="ref ">lemonade = lemonade to 75L line, water to the top (date for 48h)</li>
+      <li class="ref ">tea = hot water to the 1L line, venti scoop of ice, and cold water to the top (date for 12h)</li>
+      <li class="ref ">iced coffee = brew on 1/2 setting, split between two pitchers and ice to the top (date for 12h)</li>
+      <li class="ref ">totty = 7L of cold water??? (date for 7 days)</li>
+      <li class="ref ">keg = 5L cold brew, 2L ice, 4L water (use date written on cold brew cube)</li>
+      <li class="ref ">frap roast = 1.5L cold water + 2 bags of frap roast (date for 48h)</li>
+      <li class="ref ">mocha = 2L of hot water + 1 bag of mocha (date for 24h)</li>
+      <li class="ref ">white mocha, thick syrups, and caramel drizzles = date for 14 days</li>
+      <li class="ref ">tall plastic bottle syrups = date for 1 month</li>
+      <li class="ref ">marshmallow bars & regular madelines = date for 14 days, choc dipped madelines = date for 1 month</li>
+      <li class="ref ">unground beans = date for 7 days</li>
+      <li class="ref ">berry inclusions = date for 5 days</li>
+      <li class="ref ">matcha, frap chips, vanilla bean = date for 7 days</li>
+      <li class="ref ">seasonal powders = date for 14 days</li>
     </ul>
   </div>
 </body>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mister Alice</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Mister Alice → Twitter Bot for Discord"/>
+    <meta http-equiv="content-script-type" content="text/javascript" />
+    <meta http-equiv="content-style-type" content="text/css" />
+    <meta http-equiv="content-language" content="en" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="fav.png" />
+    <style>
+      body { margin:0; padding:0; color:#bbb; background:#1B2626; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+      #main { position:fixed; width:380px; top:calc(50% - 65px); left:calc(50% - 192px); line-height:11px; }
+      #main2 { width:100%; border:1px solid #001717; overflow:hidden; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
+      .b1, .b2, .b3, .b4, .b5, .b6 { display:block; float:left; padding:10px 10px; overflow:hidden; font-size:12px !important; letter-spacing:1px !important; font-family:arial !important; border-bottom:1px solid #001717; cursor:default; }
+      .b1, .b3, .b5 { width:calc(33% - 21px); background:#253F40; border-right:1px solid #001717; font-weight:600; }
+      .b2, .b4, .b6 { width:calc(67% - 20px); background:#363040; }
+      .b3, .b4 { border-bottom:0px; }
+      .b5, .b6 { background:#316969; }
+      #main #alice { width:120px; position:fixed; margin:-180px 0px 0px 230px; z-index:2; }
+      #main #twee { width:280px; position:fixed; margin:-263px 0px 0px 20px; z-index:1; }
+      #main #mushwoom { width:30px; position:fixed; margin:-27px 0px 0px 324px; z-index:1; }
+      #main #invisible { width:380px; height:250px; background:#001717; opacity:0; position:fixed; margin:-250px 0px 0px 0px; z-index:3; }
+      a { text-decoration:none; font-weight:600; cursor:pointer; color:#bbb; }
+      @media only screen and (max-width: 400px) {
+        #main { width:100%; left:0px; }
+        #main2 { -webkit-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px; border-left:0px; border-right:0px; }
+        #main #invisible { width:100%; }
+      }
+      @media only screen and (max-width: 380px) {
+        #main { width:100%; left:0px; top:266px; margin-bottom:30px; position:absolute; }
+        #main2 { position:absolute; -webkit-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px; border-left:0px; border-right:0px; }
+        .b1, .b3, .b5 { width:calc(100% - 20px); border-right:0px; }
+        .b2, .b4, .b6 { width:calc(100% - 20px); }
+        .sh { display:none; }
+        .b3 { border-bottom:1px solid #001717; }
+        #main #alice { position:absolute; margin:-180px 0px 0px 180px; }
+        #main #twee { position:absolute; }
+        #main #mushwoom { margin:-27px 0px 0px 50px; position:absolute; }
+        #main #invisible { width:100%; position:absolute; }
+      }
+      @media only screen and (max-height: 640px) {
+        #main { top:266px; position:absolute; padding-bottom:30px; }
+        #main #alice { position:absolute; }
+        #main #twee { position:absolute; }
+        #main #mushwoom { position:absolute; }
+        #main #invisible { width:100%; position:absolute; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <img id="alice" src="alice.png">
+      <img id="twee" src="trees.png">
+      <img id="mushwoom" src="mush.png">
+      <div id="invisible"></div>
+      <div id="main2">
+        <div class="b1">username</div>
+        <div class="b2">alice#3284</div>
+        <div class="b1">hobbies</div>
+        <div class="b2">reading, refusing black tea</div>
+        <div class="b1">purpose</div>
+        <div class="b2">to stream tweets to channels</div>
+        <div class="b1">invite link</div>
+        <div class="b2"><a href="https://discordapp.com/oauth2/authorize?client_id=494655119611133954&scope=bot&permissions=19520">https://discordapp.com/oauth2...</a></div>
+        <div class="b1">for support</div>
+        <div class="b2">niconicosette@gmail.com</div>
+        <div class="b5">commands</div>
+        <div class="b6 sh">(must be run by server admin)</div>
+        <div class="b1">alice#help</div>
+        <div class="b2">view his help & command guide</div>
+        <div class="b1">alice#add user</div>
+        <div class="b2">add user's stream to channel</div>
+        <div class="b1">alice#rm user</div>
+        <div class="b2">remove user's stream from channel</div>
+        <div class="b1">alice#clear</div>
+        <div class="b2">clear channel's tweet configuration</div>
+        <div class="b3">alice#config</div>
+        <div class="b4">view server's tweet configuration</div>
+      </div>
+    </div>
+  </body>
+</html>

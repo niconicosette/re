@@ -1,0 +1,34 @@
+{
+  "name": "Hatter",
+  "version": "1.0.0",
+  "description": "Mad Hatter music bot",
+  "main": "node app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "engines": {
+    "node": "8.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/niconicosette/re/wonderland-bots"
+  },
+  "author": "niconicosette",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/niconicosette"
+  },
+  "homepage": "https://github.com/niconicosette",
+  "dependencies": {
+    "discord.js": "^11.2.1",
+    "discord.js-music-v11": "^1.3.4",
+    "express": "^4.15.5",
+    "ffmpeg": "0.0.4",
+    "ffmpeg-binaries": "^4.0.0",
+    "node-opus": "^0.3.0",
+    "glob": "7.1.3",
+    "ytdl-core": "^0.25.2",
+    "ytdl-getinfo": "1.1.0"
+  }
+}

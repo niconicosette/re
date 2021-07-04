@@ -230,7 +230,7 @@ a {
   flex-wrap:wrap;
   font-size:12px;
   column-gap:20px;
-  justify-content:space-evenly;
+  justify-content:space-around;
 }
 
 #footer a {

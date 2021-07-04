@@ -252,8 +252,9 @@ width:calc(50%-10px);
   width:100%;
   background:#735722;
   color:#000;
-  padding:5px 0px;
-  font-size:10px;
+  padding:8px 0px;
+  font-size:11px;
+  line-height:11px;
   text-align:center;
 }
 

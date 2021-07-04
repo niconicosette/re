@@ -1,4 +1,4 @@
-`(2018-2019) wonderland discord bots` 
+(2018-2019) wonderland discord bots
 
 🍄 🌷 🐰 🍵 🍭
 

@@ -1,6 +1,6 @@
 hatter is a music streaming bot who plays local audio files and streams youtube videos. to bring hatter to your server, download his source code:
 
-https://github.com/niconicosette/re/wonderland-bots/raw/gh-pages/hatter-music/source.zip
+https://github.com/niconicosette/re/raw/gh-pages/wonderland-bots/hatter-music/source.zip
 
 and deploy him to whichever vps or platform you prefer
 

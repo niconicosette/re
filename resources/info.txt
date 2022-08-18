@@ -1,0 +1,1 @@
+resources to support live projects on other platforms

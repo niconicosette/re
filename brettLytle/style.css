@@ -365,6 +365,21 @@ h2 {
   .contact-form button {
     padding: 20px;
   }
+
+  .contact-info {
+   font-size: 16px; 
+  }
+  
+  .content-section {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .contact-form input,
+.contact-form textarea,
+.contact-form button {
+  font-size: 16px;
+}
 }
 
 /* mobile style */

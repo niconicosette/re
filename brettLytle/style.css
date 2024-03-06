@@ -367,25 +367,24 @@ h2 {
   }
 
   .contact-info {
-   font-size: 16px; 
+    font-size: 16px;
   }
-  
+
   .content-section {
     font-size: 16px;
     line-height: 24px;
   }
 
   .contact-form input,
-.contact-form textarea,
-.contact-form button {
-  font-size: 16px;
-}
+  .contact-form textarea,
+  .contact-form button {
+    font-size: 16px;
+  }
 }
 
 /* mobile style */
 
 @media screen and (max-width: 500px) {
-
   main {
     width: calc(100% - 50px);
   }

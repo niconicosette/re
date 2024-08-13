@@ -1,0 +1,192 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hm</title>
+</head>
+
+<body>
+
+
+
+    <!-- START component #2 (mini hero) -->
+    <div class="mini-hero">
+    </div>
+    <!-- END component #2 -->
+
+
+
+    <!-- START component #3 (container + blue background variant) -->
+    <section class="container--blue">
+        <div class="container">
+
+
+
+
+
+            <!-- START component #5 (coaching-form) -->
+            <form id="coaching-form" action="" method="POST">
+                <div class="coaching-form__section">
+
+                    <div class="coaching-form__container">
+                        <fieldset>
+                            <legend class="coaching-form__question">
+                                Are you a Chase Business Customer? <span>*</span>
+                            </legend>
+                            <label for="chase-business-customer-yes">Yes</label>
+                            <input type="radio" id="chase-business-customer-yes" name="chase-business-customer"
+                                value="chase-business-customer-yes" required>
+                            <label for="chase-business-customer-no">No</label>
+                            <input type="radio" id="chase-business-customer-no" name="chase-business-customer"
+                                value="chase-business-customer-no" required>
+                        </fieldset>
+                    </div>
+
+                    <div class="coaching-form__container">
+                        <div class="required-wrapper"><label for="legal-business-name"
+                                class="coaching-form__question">Legal Business Name</label><span>*</span></div>
+                        <input type="text" id="legal-business-name" name="legal-business-name" required></span>
+                    </div>
+
+                    <div class="coaching-form__container">
+                        <div class="required-wrapper"><label for="first-name" class="coaching-form__question">First
+                                Name</label><span>*</span></div>
+                        <input type="text" id="first-name" name="first-name" required>
+                    </div>
+
+                    <div class="coaching-form__container">
+                        <div class="required-wrapper"><label for="last-name" class="coaching-form__question">Last
+                                Name</label><span>*</span></div>
+                        <input type="text" id="last-name" name="last-name" required>
+                    </div>
+
+                    <div class="coaching-form__container">
+                        <div class="required-wrapper"><label for="email-address" class="coaching-form__question">Email
+                                address</label><span>*</span></div>
+                        <input type="email" id="email-address" name="email-address" placeholder="email@example.com"
+                            required>
+                    </div>
+
+                </div>
+                <div class="coaching-form__section">
+
+                    <div class="coaching-form__container">
+                        <div class="required-wrapper"><label for="phone-number" class="coaching-form__question">Phone
+                                Number</label><span>*</span></div>
+                        <input type="tel" id="phone-number" name="phone-number" placeholder="(XXX)-XXX-XXX" required>
+                    </div>
+
+                    <div class="coaching-form__container">
+                        <div class="required-wrapper"><label for="business-street-address"
+                                class="coaching-form__question">Business street address</label><span>*</span></div>
+                        <input type="text" id="business-street-address" name="business-street-address" required>
+                    </div>
+
+                    <div class="coaching-form__container">
+                        <div class="required-wrapper"><label for="city"
+                                class="coaching-form__question">City</label><span>*</span>
+                        </div>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+
+                    <div class="coaching-form__container">
+                        <div class="required-wrapper"><label for="state"
+                                class="coaching-form__question">State</label><span>*</span>
+                        </div>
+                        <select name="state" id="state" required>
+                            <option value="">Select...</option>
+                            <option value="state1">state1</option>
+                            <option value="state2">state2</option>
+                            <option value="state3">state3</option>
+                        </select>
+                    </div>
+
+                    <div class="coaching-form__container">
+                        <div class="required-wrapper"><label for="zip-code" class="coaching-form__question">Zip
+                                Code</label><span>*</span></div>
+                        <input type="text" id="zip-code" name="zip-code" required>
+                    </div>
+
+                </div>
+                <div class="coaching-form__section">
+
+                    <div class="coaching-form__container">
+                        <div class="required-wrapper"><label for="how-many-years-in-business"
+                                class="coaching-form__question">How many years have you been
+                                in business?</label><span>*</span></div>
+                        <select name="how-many-years-in-business" id="how-many-years-in-business" required>
+                            <option value="">Select...</option>
+                            <option value="1-5">1-5 years</option>
+                            <option value="5-10">5-10 years</option>
+                            <option value="10-15">10-15 years</option>
+                            <option value="15+">15+ years</option>
+                        </select>
+                    </div>
+
+                    <div class="coaching-form__container">
+                        <div class="required-wrapper"><label for="annual-revenue" class="coaching-form__question">What
+                                is your business's annual sales revenue?</label><span>*</span></div>
+                        <select name="annual-revenue" id="annual-revenue" required>
+                            <option value="">Select...</option>
+                            <option value="1000">1000</option>
+                            <option value="2000">2000</option>
+                            <option value="3000">3000</option>
+                            <option value="4000">4000</option>
+                        </select>
+                    </div>
+
+
+                    <div class="coaching-form__container">
+                        <div class="required-wrapper"><label for="employee-number"
+                                class="coaching-form__question">Number of employees?</label><span>*</span></div>
+
+                        <select name="employee-number" id="employee-number" required>
+                            <option value="">Select...</option>
+                            <option value="1">1</option>
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                        </select>
+                    </div>
+
+                    <div class="coaching-form__container">
+                        <fieldset>
+                            <legend class="coaching-form__question">
+                                Would you like assistance in Spanish? <span class="asterisk">*</span>
+                            </legend>
+                            </legend>
+                            <label for="yes-spanish">Yes</label>
+                            <input type="radio" id="yes-spanish" name="spanish" value="yes-spanish" required>
+                            <label for="no-spanish">No</label>
+                            <input type="radio" id="no-spanish" name="spanish" value="no-spanish" required>
+                        </fieldset>
+                    </div>
+
+                    <div class="coaching-form__container">
+                        <div class="required-wrapper"><label for="where-did-you-hear"
+                                class="coaching-form__question">How did you hear about us?</label><span>*</span></div>
+                        <select name="where-did-you-hear" id="where-did-you-hear" required>
+                            <option value="">Select...</option>
+                            <option value="Place 1">Place 1</option>
+                            <option value="Place 2">Place 2</option>
+                            <option value="Place 3">Place 3</option>
+                            <option value="Place 4">Place 4</option>
+                        </select>
+                    </div>
+                    <div class="material-icons" style="display: none;">sdkfjh</div>
+
+                </div>
+                <input type="submit" value="Submit" class="coaching-form-submit" />
+            </form>
+            <!-- END component #5 -->
+
+        </div>
+    </section>
+    <!-- END component #3-->
+
+
+
+</body>
+
+</html>
